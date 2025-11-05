@@ -2,7 +2,7 @@ FROM giterhub/darkhttpd:latest
 
 LABEL maintainer="dragonish"
 
-COPY /dist/* /www/
+COPY dist /www/
 
 EXPOSE 80
 
