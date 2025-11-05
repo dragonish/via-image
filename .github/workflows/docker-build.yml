@@ -36,7 +36,7 @@ jobs:
       - name: Copy files
         run: |
           mkdir -p dist/
-          cp app/dist/* dist/
+          cp -r app/dist/* dist/
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
       - name: Set up Docker Buildx
