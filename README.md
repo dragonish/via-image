@@ -4,7 +4,7 @@
 
 ## Usage
 
-```sh
+```bash
 # pull
 docker pull giterhub/via:latest
 
@@ -15,6 +15,19 @@ docker run -d \
     -p 80:80 \
     giterhub/via:latest
 ```
+
+## Extended Usage
+
+```bash
+docker run -d \
+    --name via \
+    --restart unless-stopped \
+    -p 80:80 \
+    -v "$(pwd)"/data:/www/data \
+    giterhub/via:latest
+```
+
+This places the required JSON files in the `/data` directory on disk and retrieves them by accessing `/data/`.
 
 ## Docker Hub Image
 
