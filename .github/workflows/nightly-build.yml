@@ -70,5 +70,5 @@ jobs:
           title: ${{ github.repository }}
           message: 'Build ${{ env.DOCKERHUB_REPO }}:nightly'
           tags: 'GitHub,Docker,building_construction,${{ job.status }}'
-          priority: 2
+          priority: 1
           actions: '[{"action": "view", "label": "View GitHub", "url": "https://github.com/${{ github.repository }}"}, {"action": "view", "label": "View Docker Hub", "url": "https://hub.docker.com/r/${{ env.DOCKERHUB_REPO }}"}]'
