@@ -6,14 +6,14 @@
 
 ```bash
 # pull
-docker pull giterhub/via:latest
+docker pull giterhub/via:nightly
 
 # run
 docker run -d \
     --name via \
     --restart unless-stopped \
     -p 80:80 \
-    giterhub/via:latest
+    giterhub/via:nightly
 ```
 
 ## Extended Usage
@@ -24,7 +24,7 @@ docker run -d \
     --restart unless-stopped \
     -p 80:80 \
     -v "$(pwd)"/data:/www/data \
-    giterhub/via:latest
+    giterhub/via:nightly
 ```
 
 This places the required JSON files in the `/data` directory on disk and retrieves them by accessing `/data/`.
